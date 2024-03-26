@@ -70,4 +70,39 @@ Answer:-
 
 Task.2:-  Create an image gallery with three images in a row. Use media queries to adjust the layout to two images in row for screen smaller than 800px and one image in a row for screens smaller than 500px.
 Answer:-
-Task-2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo gallery </title>
+  <style>
+    .image-gallery{
+          display: flex;
+          flex-wrap: wrap;
+           justify-content: space-between;
+    }
+    .image-gallery img{
+      width: 30%;
+      margin: 10px;
+    }
+    @media screen and ( max-width:800px)  {
+      .image-gallery img{
+        width: 45%;
+      }
+    }
+    @media screen and (max-width:500px){
+      .image-gallery img{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class=" image-gallery">
+    <img src="https://fastly.picsum.photos/id/548/200/300.jpg?hmac=dXVAc-s_U8QgoYUrMld43VmrOby1cluk-akWgxY6b9Y" alt="image-1">
+    <img src="https://fastly.picsum.photos/id/548/200/300.jpg?hmac=dXVAc-s_U8QgoYUrMld43VmrOby1cluk-akWgxY6b9Y" alt="image-2">
+    <img src="https://fastly.picsum.photos/id/548/200/300.jpg?hmac=dXVAc-s_U8QgoYUrMld43VmrOby1cluk-akWgxY6b9Y" alt="image-3">
+  </div>
+</body>
+</html>
