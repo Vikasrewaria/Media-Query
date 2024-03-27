@@ -106,3 +106,167 @@ Answer:-
   </div>
 </body>
 </html>
+
+Task.3:- Create a navigation bar with five link. Apply a media query that converts the navigation into a vertical list for screens smaller than 768px and also changes the bacground color to gray.
+Answer:- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        .navigation{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            
+        }
+        .navigation a{
+            text-decoration:none;
+            color: white;
+        }
+        @media screen and (max-width:768px){
+            .navigation{
+                flex-direction: column;
+                text-align: center;
+                background-color:grey;
+
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="navigation">
+            
+                <a href="#">Home</a>
+                <a href=""> About</a>
+                <a href="">Services</a>
+                <a href="">Portfolio</a>
+                <a href="">Contact</a>
+           
+        </div>
+</body>
+</html>
+
+Task.4:- Create a grid based layout containing four grid items which arranges them as the screen siize changes.
+Answer:- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3,3fr);
+            gap:20px;
+            padding: 20px;
+            background-color: rgb(167, 166, 166);
+            min-height: 100vh;
+        }
+        .header{
+            background-color:red;
+            color:white;
+        }
+        .sidebar{
+            background-color: green;
+            color: white;
+        }
+        .main{
+            background-color: blue;
+            color: white;
+        }
+        .footer{
+            background-color: rgb(166, 52, 52);
+            color: white;
+        }
+        @media screen and (max-width:768px)
+        {
+            .grid-container{
+                grid-template-columns:1fr;
+            }
+        }
+        .box{
+            text-align:center
+            }
+         
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header box"> Box 1</div>
+        <div class="sidebar box">Box 2</div>
+        <div class="main box">Box 3</div>
+        <div class="footer box">Box 4</div>
+    </div>
+    
+</body>
+</html>
+
+Task.5:- Create the below given layout using the flexbox in css, which should adapt itself on mobile screen as per given below output.
+Answer:- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage Layout</title>
+    <Style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+        .header , .footer{
+            background-color:Black;
+            color:white;
+           padding: 20px;
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+         }
+        .sidebar{
+            background-color: aqua;
+            color:white;
+            padding: 20px;
+            
+        }
+        .content{
+            Background-color:orange;
+            color: white;
+            padding: 20px;
+           
+        }    
+        @media screen and ( min-width:768px)
+        {
+            .container{
+              
+                flex-direction:row;
+
+            }
+            .sidebar,
+            .content{
+                flex: 1;
+            }
+        }
+    </Style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Box 1</div>
+        <div class="main">
+            <div class="sidebar">Box 2</div>
+            <div class="content">Box 3</div>
+        </div>
+        <div class="footer">Box 4</div>
+    </div>
+    
+</body>
+</html>
